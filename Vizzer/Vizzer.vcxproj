@@ -37,23 +37,19 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\proj\props\DXSDK.props" />
     <Import Project="..\proj\props\libsg.props" />
-    <Import Project="..\proj\props\mLib.props" />
     <Import Project="..\proj\props\JNI.props" />
     <Import Project="..\proj\props\OpenCV3.props" />
     <Import Project="..\proj\props\editline.props" />
     <Import Project="..\proj\props\assimp.props" />
-    <Import Project="..\proj\props\cpp-netlib.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\proj\props\DXSDK.props" />
     <Import Project="..\proj\props\libsg.props" />
-    <Import Project="..\proj\props\mLib.props" />
     <Import Project="..\proj\props\JNI.props" />
     <Import Project="..\proj\props\OpenCV3.props" />
     <Import Project="..\proj\props\editline.props" />
     <Import Project="..\proj\props\assimp.props" />
-    <Import Project="..\proj\props\cpp-netlib.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

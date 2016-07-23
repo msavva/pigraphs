@@ -106,7 +106,6 @@
     <ClInclude Include="mesh\projection.h" />
     <ClInclude Include="mesh\sampling.h" />
     <ClInclude Include="mesh\TriMesh.h" />
-    <ClInclude Include="net\net.h" />
     <ClInclude Include="segmentation\MeshSegment.h" />
     <ClInclude Include="segmentation\Part.h" />
     <ClInclude Include="segmentation\segmentation.h" />
@@ -218,7 +217,6 @@
     <ClCompile Include="mesh\MeshSamples.cpp" />
     <ClCompile Include="mesh\mesh_nn.cpp" />
     <ClCompile Include="mesh\projection.cpp" />
-    <ClCompile Include="net\net.cpp" />
     <ClCompile Include="segmentation\MeshSegment.cpp" />
     <ClCompile Include="segmentation\Part.cpp" />
     <ClCompile Include="segmentation\segmentation.cpp" />
@@ -273,21 +271,17 @@
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\proj\props\mLib.props" />
     <Import Project="..\proj\props\libsg.props" />
     <Import Project="..\proj\props\JNI.props" />
     <Import Project="..\proj\props\OpenCV3.props" />
     <Import Project="..\proj\props\assimp.props" />
-    <Import Project="..\proj\props\cpp-netlib.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\proj\props\mLib.props" />
     <Import Project="..\proj\props\libsg.props" />
     <Import Project="..\proj\props\JNI.props" />
     <Import Project="..\proj\props\OpenCV3.props" />
     <Import Project="..\proj\props\assimp.props" />
-    <Import Project="..\proj\props\cpp-netlib.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

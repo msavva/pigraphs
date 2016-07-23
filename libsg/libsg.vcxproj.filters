@@ -49,9 +49,6 @@
     <Filter Include="interaction">
       <UniqueIdentifier>{0b46294d-1231-4849-8fcc-210f3c0da940}</UniqueIdentifier>
     </Filter>
-    <Filter Include="net">
-      <UniqueIdentifier>{637b47e0-ab6b-4c34-912f-ffca9925e55a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="core\synth">
       <UniqueIdentifier>{5c5671a8-73ad-4637-a5b2-a2268455d776}</UniqueIdentifier>
     </Filter>
@@ -359,9 +356,6 @@
     <ClInclude Include="segmentation\SurfacePredictor.h">
       <Filter>segmentation</Filter>
     </ClInclude>
-    <ClInclude Include="net\net.h">
-      <Filter>net</Filter>
-    </ClInclude>
     <ClInclude Include="core\SkelPoseSampler.h">
       <Filter>core</Filter>
     </ClInclude>
@@ -634,9 +628,6 @@
     </ClCompile>
     <ClCompile Include="segmentation\SurfacePredictor.cpp">
       <Filter>segmentation</Filter>
-    </ClCompile>
-    <ClCompile Include="net\net.cpp">
-      <Filter>net</Filter>
     </ClCompile>
     <ClCompile Include="core\SkelPoseSampler.cpp">
       <Filter>core</Filter>

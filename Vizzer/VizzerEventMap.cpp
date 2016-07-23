@@ -13,7 +13,6 @@
 #include <interaction/InteractionFeatures.h>
 #include <interaction/InteractionFrames.h>
 #include <io/mitsuba_vol.h>
-#include <net/net.h>
 #include <segmentation/segmentation.h>
 #include <segmentation/SurfacePredictor.h>
 
@@ -49,18 +48,6 @@ void VizzerEventMap::populate(D3D11Vizzer* _viz, ml::ApplicationData& app) {
     vector<string> rest(args.begin() + 1, args.end());
     m_viz->vs.testFun = rest;
     cout << "Test command set to D3D:" << sg::util::join(rest, " ") << endl;
-    return E::E_OK;
-  };
-  m_eventMap["D3D:http-get"] = [&] (const Tokens &args) {
-    if (args.size() > 1) {
-      vector<string> rest(args.begin() + 1, args.end());
-      if (rest.size() < 2) {
-        SG_LOG_INFO << sg::net::get(rest[0]);
-      } else {
-        sg::net::get(rest[0], rest[1]);
-        SG_LOG_INFO << "Get from " << rest[0] << " saved to " << rest[1];
-      }
-    }
     return E::E_OK;
   };
   m_eventMap["D3D:printParams"] = [&] (const Tokens &args) {

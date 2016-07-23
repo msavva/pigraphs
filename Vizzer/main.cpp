@@ -5,7 +5,6 @@
 
 #include <core/Database.h>
 #include <io/binvox.h>
-#include <net/net.h>
 #include <ui/CommandConsole.h>
 #include <util/Params.h>
 #include <util/util.h>
@@ -194,28 +193,6 @@ void launchConsole(SharedAppState& state, sg::util::Params* params) {  // NOLINT
   console.start(&state.terminate);
 }
 
-void launchHttpServer(SharedAppState& state, sg::net::HTTPServer** ppServer) {  // NOLINT
-  using sg::net::Request;  using sg::net::Response;
-  const string address = "localhost";
-  const string port = "8888";
-  sg::net::HTTPServer* pServer = new sg::net::HTTPServer(address, port);
-  *ppServer = pServer;
-  sg::net::HTTPServer::HandlerFun hello = [] (const Request& req, Response* pRes) {
-    pRes->contentType = "text/plain";
-    pRes->body = "Hello there! You came for: " + req.destination;
-  };
-  pServer->addHandler("/", hello);
-  pServer->addHandler("/hello", hello);
-  pServer->addHandler("/favicon.ico", [] (const Request& req, Response* pRes) {
-    pRes->contentType = "image/gif";
-    pRes->body = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=";
-  });
-
-  SG_LOG_INFO << "Starting server at " << address << ":" << port;
-  pServer->run();
-}
-
-
 void positionConsoleWindow() {
   system("mode CON: COLS=180");  // Set console window width
   HWND hWnd = GetConsoleWindow();
@@ -250,9 +227,6 @@ int main(int argc, const char** argv) {
 
   // Start console thread
   std::thread consoleThread(launchConsole, std::ref(state), &p);
-  // Start http server thread
-  sg::net::HTTPServer* pHTTPServer = nullptr;
-  std::thread httpServerThread(launchHttpServer, std::ref(state), &pHTTPServer);
 
   // autostart Vizzer UI
   if (p.get<bool>("autostartVizzer")) {
@@ -269,13 +243,6 @@ int main(int argc, const char** argv) {
   if (consoleThread.joinable()) {
     consoleThread.join();
   }
-
-  SG_LOG_INFO << "Waiting for http thread...";
-  pHTTPServer->stop();
-  if (httpServerThread.joinable()) {
-    httpServerThread.join();
-  }
-  delete pHTTPServer;
 
   SG_LOG_INFO << "Waiting for Vizzer thread...";
   if (state.isVizStarted && state.vizzerThread.joinable()) {

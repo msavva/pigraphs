@@ -50,3 +50,8 @@ CompiledShaders/
 # Sublime project files
 *.sublime-*
 
+# External mLib dependencies
+mLib/
+mLibExternal/
+mLib.zip
+
