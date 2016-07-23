@@ -1,0 +1,304 @@
+# Whether to start up Vizzer UI automatically
+autostartVizzer = false
+
+# Directories (relative to dataDir)
+# Local data directory (for small data files checked in with code)
+localDataDir = ../../data/
+# Remote data directory (on etherion network drive)
+dataDir = V:/data/scenegrok/
+# Local cache directory (under bin/)
+dataCacheDir = ../cache/
+# Local work directory (under bin/)
+workDir = ../work/
+# Local log directory (under log/)
+logDir = ../log/
+# Log filename (see http://boost-log.sourceforge.net/libs/log/doc/html/log/detailed/sink_backends.html#log.detailed.sink_backends.text_file)
+logFile = sceneGrok_%N.log 
+# Log level (trace, debug, info, warning, error, fatal)
+logSeverity = info
+# Recordings relative to dataDir
+recDir = recordings/
+# Extension used for recording files
+recFileExtension = .json
+# Scenes (.ply files) relative to dataDir
+scanDir = scans/
+# Cornell labeled PLY Scenes relative to dataDir
+cornellScanDir = scans-cornell/
+# Classifiers relative to dataDir
+classifiersDir = classifiers/
+# Datasets relative to dataDir
+datasetsDir = datasets/
+# Classifier set to load
+classifierSet = default-release
+# Models directory (relative to dataDir)
+modelsDir = ../models/repositories/g3dw/models/
+# Model metadata file (relative to dataDir)
+#modelsMetadataFile = ../models/data-tables/models3d.oim.json
+modelsMetadataFile = ../models/data-tables/models3d.wssAligned.json
+# Mapping file for annotations to model categories (relative to localDataDir)
+categoryMappingFile = categories.csv
+# File specifying I-Sets used for testing (relative to localDataDir)
+testISetsFile = test-isets.csv
+# file listing models to load into ModelDatabase (relative to dataDir, if not defined all models are loaded)
+modelWhiteListFile = model-whitelist.txt
+# Directory where model annotations are stored
+modelAnnotationsDir = evaluation/modelAnnotations
+# Directory where model segmentations are stored (relative to dataDir)
+modelSegmentsDir = ../models/surfaces/surfaces.obj/wss/
+# Directory where model voxelizations are stored (relative to dataDir)
+modelVoxelsDir = ../models/repositories/g3dw/models-binvox/
+# Directory where solid model voxelizations are stored (relative to dataDir)
+modelVoxelsSolidDir = ../models/repositories/g3dw/models-binvox-solid/
+# Interaction records summary file (relative to dataDir)
+interactionRecordsSummaryFile = interactionRecords.summary.csv
+# Support priors file (relative to dataDir)
+supportParentGivenChildFile = stats/supportParentGivenChild.csv
+# Support priors file (relative to dataDir)
+supportChildGivenParentFile = stats/supportChildGivenParent.csv
+# Subcategories file (relative to dataDir)
+subcategoriesFile = subcategories.txt
+# Whether to load cached interactions or not
+useCachedInteractions = false
+# CMU Mocap ASF/AMC dataset dir (assume index.csv exists there)
+cmuMocapDir = V:/data/external/cmumocap/asfamc/
+
+# Dataset creation
+[Dataset]
+# whether to compute InteractionGraphs for all recorded interactions in the dataset
+computeInteractionGraphs = false
+# whether to compute InteractionFrames for all recorded interactions in the dataset
+computeInteractionFrames = false
+# forces retraining of classifiers even if they exist
+forceRetrain = false
+# forces recomputing centroids even if they exist
+forceRecomputeCentroids = false
+# forces loading of database recording for debugging (will limit number of loaded recordings)
+debugDatabase = true
+# Limit the number of recordings to load for debugging
+maxDebugRecordings = 1
+# loads debug versions of scans
+loadDebugScenes = true
+# Skip recordings without scans
+skipRecordingsWithoutScenes = true
+# whether to train/test for all variations of a classifier type
+allVariations = false
+# toggle creation of datasets on start (see datasetsToDump var) [DEPRECATED]
+dumpDatasets = false
+# comma separated list of dataset ids to dump (segmentCentroidActivation,activeSegments,scenePoseBoW,features,segmentJointsAggr,segmentPerJoint) [DEPRECATED]
+datasetsToDump = segmentCentroidActivation
+### segmentPose params
+# whether to split classifier dataset creation per joint group (for segmentPose)
+perJointSplit = false
+# whether to print joint group name in a column
+printJointIndex = false
+### segmentPerJoint params
+# Type of features to use for the per joint classifier (meshcentroid, meshsimplistic)
+segmentPerJointFeatures = meshcentroid
+### segmentJointsAggr params
+# whether to use activated segment presence as feature
+useActivation = true
+# whether to use per-joint segment contact confidence scores
+useJointSegScores = true
+# whether to use segment features
+useJointSegFeatures = false
+# whether the per-joint classifier should be retrained
+trainPerJoint = false
+# comma separated list of scene ids to use as test set (all others are used for training) (gates400,gates500,gates381a,living3 for paper)
+testSetSceneIds = gates400,gates500,gates381a,living3
+
+# Settings for evaluating classifiers
+[Evaluation]
+# Orientation divisions to sample (7 for paper)
+searchThetaDivisions = 7
+# Total search sample count (5000 for paper)
+searchSampleCount = 5000
+# Bin size to use for second stage sampling
+searchSampleBinSize = 0.4
+# Ratio of top bin likelihood down to which bins are chosen for resampling in second stage.
+# If < 0, then 2nd stage sampling is disabled
+secondStageThresh = 0.5
+
+# Settings for classifier learning
+[Classification]
+# Classifier type to train (RandomForest, SMO, Logistic)
+classifierType = RandomForest
+# Classifier options (see Weka user manual)
+classifierOptions = 
+# negative examples for each verb classifier dataset (3000 for paper)
+negativeExampleCount = 3000
+# positive examples for each verb classifier dataset (3000 for paper)
+positiveExampleCount = 3000
+# Percentage of positive examples that are randomly translated and used as negatives (0 for paper)
+perturbationExamplePercent = 0.0
+
+[Segmentation]
+# k threshold used by Felzenswalb graph segmentation algorithm (0.03 for paper)
+kThresh = 0.001
+# minimum number of vertices per segment (200 for paper)
+segMinVerts = 200
+# minimum OBB diagonal length for segment (0.15 for paper)
+segMinDiag = 0.15
+# segments which are "long sticks" are culled. This is the maximum aspect ratio allowed. (10.0 for paper)
+segAspectCutoff = 10.0
+# weight for adding in HSL color space difference metric; (1-colorWeight) applied to normals (0.0 for paper)
+colorWeight = 0.0
+# whether to constrain OBBs to have one axis be in the Z up direction (true for paper)
+constrainZup = true
+# whether to remove geometry close to the ground and add a clean ground plane
+addGround = true
+# whether to absorb close by segments into segment groups
+segGroupAbsorb = true
+# Threshold above which we automatically absorb segments
+segGroupAbsorbThreshold = 0.5
+# whether to load annotated segment groups with each scene
+loadAnnotations = true
+
+[SegmentGroup]
+# Whether the segmentation should be loaded with the segment group
+loadSegments = true
+# Whether OBBs should be recomputed for loaded segment groups
+recomputeOBBs = true
+
+[Interaction]
+# number of skeleton samples to use per InteractionSet (5 for paper, 0 = no sampling, use all)
+skeletonCount = 5
+# number of skeleton clusters to use (0 = do not cluster)
+skeletonClusterCount = 0
+# maximum distance for gaze activation of segments (2.0 for paper)
+maxDistGaze = 2.0
+# maximum distance from each joint to nearest interacting segment (0.3 for paper)
+maxDistToSegment = .1
+# ratio of scan bounding box above which segments won't be considered for interaction activation
+# Use 0 for no filtering
+maxSegmentSizeRatio = .5
+# number of skeletons to skip per interaction sample (5 for paper)
+skeletonSkip = 5
+# ignores joints with zero confidence (false for paper)
+ignoreInferredJoints = false
+# number of nearest activated segments per joint to retrieve (2 for paper)
+kNearestSegsPerJoint = 2
+# whether UI will prefer to visualize precomputed active segments, or recompute on the fly
+usePrecomputedActiveSegs = false
+# percentage of nearest neighbor InteractionGraphs within each InteractionSet to use for IG-IG similarity
+igSimNNpercent = 0.05
+# maximum number of nearest neighbor InteractionGraphs to use for IG-IG similarity
+igSimNNmaxNumNNs = 50
+# type of similarity to use in IGKNN classifier (IGKNN, IFSUP, PIGIG, PIGIGW)
+igSimType = PIGIGW
+# Default pig is selected using the partType and the PIGAggregatorStrategy
+# PartType to use (Segment, SegmentGroup, Object), use SegmentGroup for isynth
+partType = Segment
+# strategy to use for aggregating IGs into a PIG (use PerCategoryProtoNodes for isynth)
+# (SingleProtoNodes, PerCategoryProtoNodes, PerPartProtoNodes, PerVerbTargetProtoNodes)
+PIGAggregatorStrategy = PerPartProtoNodes
+
+[InteractionFrame]
+# dimensions (half-width of OBB)
+halfWidth = 1
+# number of bins per dimension
+numBins = 20
+# number of skeleton mesh points samples to add to IF
+numSkelSamplePoints = 100
+# number of active OBB samples to add to IF
+numInteractingOBBSamplePoints = 1000
+# number of samples within IF's OBB for OccupancyGrid
+numOccupancySamplePoints = 1000
+# minimum weight to visualize an IF bin
+minBinWeight = 0.05
+# whether to re-weight bins using joint weights
+useJointWeights = true
+# whether to compute interaction frams for JointsSurface
+computeJointsSurface = false
+
+[Clustering]
+# number of centroids to retrieve through k-means clustering (100 for paper)
+numCentroids = 100
+# whether clustering is carried out for each joint independently (adding up to total numCentroids across all joints) (false for paper)
+splitCentroidsPerJointGroup = false
+# Regularization constant added to eigenvalues during whitening to avoid near-zero issues (0.01 to 0.1 is good according to Coates & Ng 2012) (0.01 for paper)
+epsZCA = 0.01
+# Segment activation count above which segment is considered "active" and used for clustering (100 for paper)
+segmentUsageCutoff = 100.0
+
+[ModelDatabase]
+# Subdivide loaded models until below max edge threshold (if 0, then disable subdivision)
+subDivideMaxEdgeLength = 0
+shapenetBaseURL = http://shapenet.cs.stanford.edu/shapenet/data/
+defaultModelScaleUnit = 0.0254
+# Restrict models for categories (useful for debugging)
+# restrictModels = Couch:b1b5d123613e75c97d1a9cfc3f714b6d
+
+[ModelPlacer]
+# Joint interaction label threshold for predicting an object
+jointInteractionLabelThreshold = 0.05
+# Max number of iterations to search when placing object
+samplePositionsMaxIter = 5
+# number of samples to generate per iteration
+nSamplesPerIter = 5
+# ensure if noun present
+ensureNounPresent = true
+# restrict models to whitelist
+restrictToWhitelist = true
+
+[SkeletonPoser]
+# Sample positions?
+samplePositions = false
+# Beam search size
+beamSize = 10
+# Joint angles
+sampleJointAngles = false
+optimizeJointAngles = false
+
+[ModelAligner]
+# minimum XYZ step size
+minStep = 0.05
+# minimum scale factor
+minScale = 1.0
+# maximum scale factor
+maxScale = 1.51
+# step size for scaling in [minScale,maxScale]
+scaleStep = 0.25
+# height at which support plane for this alignment exists (not used if < 0)
+supportZ = -1.0
+# occupied voxel overlap weight
+wGeo = 1.0
+# unknown voxel overlap weight
+wGeoUnk = 0.5
+# skeleton non-overlap weight
+wSkel = 1.0
+# OBB volume to model volume match weight (penalizes model volumes smaller than OBB)
+wOBBVol = 1.0
+# model-front to skeleton gaze match weight (penalizes models facing away from gaze)
+wFace = 0.0
+# number of thetas to check (thetaStep = 2pi / thetaDivs)
+thetaDivs = 16
+# number of model voxel random samples for volumetric overlap
+numVoxels = 10000
+# number of skeleton random samples for skeleton range non-overlap (collision avoidance)
+numSkelSamples = 1000
+
+[ISynth]
+# Orientation divisions to sample 
+searchThetaDivisions = 10
+# Total search sample count 
+searchSampleCount = 20
+# Bin size to use for second stage sampling
+searchSampleBinSize = 0.4
+# Ratio of top bin likelihood down to which bins are chosen for resampling in second stage.
+# If < 0, then 2nd stage sampling is disabled
+secondStageThresh = -1
+# Scoring parameters
+modelCollisionWeight = 1
+modelSkeletonCollisionWeight = 1
+interactionWeight = 1.0
+useInteractionVolume = true
+usePigScore = true
+usePigSimScore = true
+useLogScore = false
+# number of skeleton random samples for skeleton range non-overlap (collision avoidance)
+numSkelSamples = 1000
+# weight of pose prior
+posePriorWeight = 1.0
+skelSelfCollisionWeight = 1.0
+# How many iteration of place/pose
+maxPoseIters = 1
