@@ -1,5 +1,5 @@
 # Whether to start up Vizzer UI automatically
-autostartVizzer = false
+autostartVizzer = true
 
 # Directories (relative to dataDir)
 # Local data directory (for small data files checked in with code)
@@ -29,7 +29,7 @@ classifiersDir = classifiers/
 # Datasets relative to dataDir
 datasetsDir = datasets/
 # Classifier set to load
-classifierSet = default-release
+classifierSet = default-debug
 # Models directory (relative to dataDir)
 modelsDir = ../models/repositories/g3dw/models/
 # Model metadata file (relative to dataDir)
@@ -58,22 +58,22 @@ supportChildGivenParentFile = stats/supportChildGivenParent.csv
 # Subcategories file (relative to dataDir)
 subcategoriesFile = subcategories.txt
 # Whether to load cached interactions or not
-useCachedInteractions = false
+useCachedInteractions = true
 # CMU Mocap ASF/AMC dataset dir (assume index.csv exists there)
 cmuMocapDir = V:/data/external/cmumocap/asfamc/
 
 # Dataset creation
 [Dataset]
 # whether to compute InteractionGraphs for all recorded interactions in the dataset
-computeInteractionGraphs = false
+computeInteractionGraphs = true
 # whether to compute InteractionFrames for all recorded interactions in the dataset
-computeInteractionFrames = false
+computeInteractionFrames = true
 # forces retraining of classifiers even if they exist
 forceRetrain = false
 # forces recomputing centroids even if they exist
 forceRecomputeCentroids = false
 # forces loading of database recording for debugging (will limit number of loaded recordings)
-debugDatabase = true
+debugDatabase = false
 # Limit the number of recordings to load for debugging
 maxDebugRecordings = 1
 # loads debug versions of scans
@@ -135,7 +135,7 @@ perturbationExamplePercent = 0.0
 # k threshold used by Felzenswalb graph segmentation algorithm (0.03 for paper)
 kThresh = 0.001
 # minimum number of vertices per segment (200 for paper)
-segMinVerts = 200
+segMinVerts = 15
 # minimum OBB diagonal length for segment (0.15 for paper)
 segMinDiag = 0.15
 # segments which are "long sticks" are culled. This is the maximum aspect ratio allowed. (10.0 for paper)
@@ -186,11 +186,11 @@ igSimNNmaxNumNNs = 50
 # type of similarity to use in IGKNN classifier (IGKNN, IFSUP, PIGIG, PIGIGW)
 igSimType = PIGIGW
 # Default pig is selected using the partType and the PIGAggregatorStrategy
-# PartType to use (Segment, SegmentGroup, Object), use SegmentGroup for isynth
-partType = Segment
-# strategy to use for aggregating IGs into a PIG (use PerCategoryProtoNodes for isynth)
+# PartType to use (Segment, SegmentGroup, Object), use SegmentGroup for isynth, use Segment for predicting on scans
+partType = SegmentGroup
+# strategy to use for aggregating IGs into a PIG (use PerCategoryProtoNodes for isynth, use PerPartProtoNodes for predicting on scans)
 # (SingleProtoNodes, PerCategoryProtoNodes, PerPartProtoNodes, PerVerbTargetProtoNodes)
-PIGAggregatorStrategy = PerPartProtoNodes
+PIGAggregatorStrategy = PerCategoryProtoNodes
 
 [InteractionFrame]
 # dimensions (half-width of OBB)
@@ -246,8 +246,8 @@ samplePositions = false
 # Beam search size
 beamSize = 10
 # Joint angles
-sampleJointAngles = false
-optimizeJointAngles = false
+sampleJointAngles = true
+optimizeJointAngles = true
 
 [ModelAligner]
 # minimum XYZ step size
@@ -281,14 +281,14 @@ numSkelSamples = 1000
 # Orientation divisions to sample 
 searchThetaDivisions = 10
 # Total search sample count 
-searchSampleCount = 20
+searchSampleCount = 500
 # Bin size to use for second stage sampling
 searchSampleBinSize = 0.4
 # Ratio of top bin likelihood down to which bins are chosen for resampling in second stage.
 # If < 0, then 2nd stage sampling is disabled
 secondStageThresh = -1
 # Scoring parameters
-modelCollisionWeight = 1
+modelCollisionWeight = 10
 modelSkeletonCollisionWeight = 1
 interactionWeight = 1.0
 useInteractionVolume = true
