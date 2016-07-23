@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="nlputil.cpp" />
+    <ClCompile Include="source\jace\proxy\edu\stanford\graphics\parser\Action.cpp" />
+    <ClCompile Include="source\jace\proxy\edu\stanford\graphics\parser\ActionParser.cpp" />
+    <ClCompile Include="source\jace\proxy\edu\stanford\graphics\parser\Mention.cpp" />
+    <ClCompile Include="source\jace\proxy\edu\stanford\graphics\wekautils\Classer.cpp" />
+    <ClCompile Include="source\jace\proxy\edu\stanford\graphics\wekautils\Clustering.cpp" />
+    <ClCompile Include="source\jace\proxy\edu\stanford\graphics\wekautils\Common.cpp" />
+    <ClCompile Include="source\jace\proxy\java\io\IOException.cpp" />
+    <ClCompile Include="source\jace\proxy\java\io\Serializable.cpp" />
+    <ClCompile Include="source\jace\proxy\java\lang\CharSequence.cpp" />
+    <ClCompile Include="source\jace\proxy\java\lang\Comparable.cpp" />
+    <ClCompile Include="source\jace\proxy\java\lang\Exception.cpp" />
+    <ClCompile Include="source\jace\proxy\java\lang\Integer.cpp" />
+    <ClCompile Include="source\jace\proxy\java\lang\Iterable.cpp" />
+    <ClCompile Include="source\jace\proxy\java\lang\Number.cpp" />
+    <ClCompile Include="source\jace\proxy\java\lang\Object.cpp" />
+    <ClCompile Include="source\jace\proxy\java\lang\String.cpp" />
+    <ClCompile Include="source\jace\proxy\java\lang\Throwable.cpp" />
+    <ClCompile Include="source\jace\proxy\java\util\AbstractCollection.cpp" />
+    <ClCompile Include="source\jace\proxy\java\util\AbstractList.cpp" />
+    <ClCompile Include="source\jace\proxy\java\util\ArrayList.cpp" />
+    <ClCompile Include="source\jace\proxy\java\util\Collection.cpp" />
+    <ClCompile Include="source\jace\proxy\java\util\List.cpp" />
+    <ClCompile Include="source\jace\proxy\java\util\RandomAccess.cpp" />
+    <ClCompile Include="wekautil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="nlputil.h" />
+    <ClInclude Include="wekautil.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FFCF37B3-5EDC-43BC-A6E0-F1524DBFCEFA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>proxy</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\proj\props\JNI.props" />
+    <Import Project="..\proj\props\mLib.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\proj\props\JNI.props" />
+    <Import Project="..\proj\props\mLib.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>JACE_PROXY_EXPORTS;WIN32;_DEBUG;_WINDOWS;_USRDLL;PROXY_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>JACE_PROXY_EXPORTS;WIN32;NDEBUG;_WINDOWS;_USRDLL;PROXY_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\include;$(MLIB_DIR)\include;$(MLIB_DIR)\..\mLibExternal\include;..\..\mLib\include;..\..\mLibExternal\include;..\..\..\mLib\include;..\..\..\mLibExternal\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

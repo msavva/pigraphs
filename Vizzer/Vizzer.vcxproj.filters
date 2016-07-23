@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="mLib">
+      <UniqueIdentifier>{eb7ca738-37c5-4ec1-a645-8a17b151d5a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{01aead1b-3760-469b-a795-415796b29516}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets">
+      <UniqueIdentifier>{c68bb8c7-7112-4d7d-a5e6-b7c59db945df}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="mLibSource.cpp">
+      <Filter>mLib</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11Vizzer.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="SharedAppState.cpp" />
+    <ClCompile Include="assetManager.cpp">
+      <Filter>assets</Filter>
+    </ClCompile>
+    <ClCompile Include="assetRenderer.cpp">
+      <Filter>assets</Filter>
+    </ClCompile>
+    <ClCompile Include="vizutil.cpp" />
+    <ClCompile Include="VizzerEventMap.cpp" />
+    <ClCompile Include="VizzerControls.cpp" />
+    <ClCompile Include="common.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mLibInclude.h">
+      <Filter>mLib</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11Vizzer.h" />
+    <ClInclude Include="SharedAppState.h" />
+    <ClInclude Include="TrackedPart.h" />
+    <ClInclude Include="assetManager.h">
+      <Filter>assets</Filter>
+    </ClInclude>
+    <ClInclude Include="assetRenderer.h">
+      <Filter>assets</Filter>
+    </ClInclude>
+    <ClInclude Include="vizutil.h" />
+    <ClInclude Include="constants.h" />
+    <ClInclude Include="VizzerEventMap.h" />
+    <ClInclude Include="VizzerControls.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="calibratedSensorData.h">
+      <Filter>mLib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\shaders\basicLight.shader">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\cubeVolume.shader">
+      <Filter>shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ann\distance.h" />
+    <ClInclude Include="ann\KdTree.h" />
+    <ClInclude Include="ann\KdTreeFlann.h" />
+    <ClInclude Include="ann\KdTreeNanoflann.h" />
+    <ClInclude Include="ann\SimpleNN.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="core\AMCRecording.h" />
+    <ClInclude Include="core\CentroidDatabase.h" />
+    <ClInclude Include="core\Classifier.h" />
+    <ClInclude Include="core\ClassifierDatabase.h" />
+    <ClInclude Include="core\Database.h" />
+    <ClInclude Include="core\Dataset.h" />
+    <ClInclude Include="core\features.h" />
+    <ClInclude Include="core\LabeledGrid.h" />
+    <ClInclude Include="core\learningUtil.h" />
+    <ClInclude Include="core\Model.h" />
+    <ClInclude Include="core\ModelDatabase.h" />
+    <ClInclude Include="core\ModelInstance.h" />
+    <ClInclude Include="core\MotionDatabase.h" />
+    <ClInclude Include="core\OccupancyGrid.h" />
+    <ClInclude Include="core\PoseController.h" />
+    <ClInclude Include="core\SkeletonDatabase.h" />
+    <ClInclude Include="core\SkeletonDistribution.h" />
+    <ClInclude Include="core\SkelPoseSampler.h" />
+    <ClInclude Include="core\Recording.h" />
+    <ClInclude Include="core\RecordingDatabase.h" />
+    <ClInclude Include="core\Scan.h" />
+    <ClInclude Include="core\ScanDatabase.h" />
+    <ClInclude Include="core\Scene.h" />
+    <ClInclude Include="core\SceneDatabase.h" />
+    <ClInclude Include="core\SceneGrokker.h" />
+    <ClInclude Include="core\SceneGrokMap.h" />
+    <ClInclude Include="core\SceneNode.h" />
+    <ClInclude Include="core\ScenePriors.h" />
+    <ClInclude Include="core\SceneSerialized.h" />
+    <ClInclude Include="core\Skeleton.h" />
+    <ClInclude Include="core\SkelState.h" />
+    <ClInclude Include="core\synth\InteractionScorer.h" />
+    <ClInclude Include="core\synth\InteractionSynth.h" />
+    <ClInclude Include="core\synth\ModelAligner.h" />
+    <ClInclude Include="core\synth\ModelPlacer.h" />
+    <ClInclude Include="core\synth\ModelRetriever.h" />
+    <ClInclude Include="core\synth\ObjectLabeler.h" />
+    <ClInclude Include="core\synth\PoseScorer.h" />
+    <ClInclude Include="core\synth\SkeletonPoser.h" />
+    <ClInclude Include="core\synth\synth.h" />
+    <ClInclude Include="core\TreeNode.h" />
+    <ClInclude Include="cv\cvutil.h" />
+    <ClInclude Include="cv\VideoPlayer.h" />
+    <ClInclude Include="eval\ConfusionMatrix.h" />
+    <ClInclude Include="eval\metrics.h" />
+    <ClInclude Include="geo\convexhull.h" />
+    <ClInclude Include="geo\geo.h" />
+    <ClInclude Include="geo\gridutils.h" />
+    <ClInclude Include="geo\lineAABB.h" />
+    <ClInclude Include="geo\minRectangle.h" />
+    <ClInclude Include="geo\OBB.h" />
+    <ClInclude Include="geo\ScoredTransform.h" />
+    <ClInclude Include="geo\voxels.h" />
+    <ClInclude Include="graph\alignment.h" />
+    <ClInclude Include="graph\Graph.h" />
+    <ClInclude Include="hierarchy\Hierarchy.h" />
+    <ClInclude Include="hierarchy\HierarchyMatcher.h" />
+    <ClInclude Include="interaction\InteractFrameSurfSampled.h" />
+    <ClInclude Include="interaction\Interaction.h" />
+    <ClInclude Include="interaction\InteractionDatabase.h" />
+    <ClInclude Include="interaction\InteractionFactory.h" />
+    <ClInclude Include="interaction\InteractionFeatures.h" />
+    <ClInclude Include="interaction\InteractionFrameFactory.h" />
+    <ClInclude Include="interaction\InteractionFrames.h" />
+    <ClInclude Include="interaction\InteractionGraph.h" />
+    <ClInclude Include="interaction\InteractionMap.h" />
+    <ClInclude Include="interaction\InteractionSet.h" />
+    <ClInclude Include="interaction\ModelAnnotation.h" />
+    <ClInclude Include="interaction\ProtoInteractionGraph.h" />
+    <ClInclude Include="interaction\similarity.h" />
+    <ClInclude Include="interaction\SkeletonInteraction.h" />
+    <ClInclude Include="interaction\SkeletonVolume.h" />
+    <ClInclude Include="interaction\VerbNoun.h" />
+    <ClInclude Include="io\binvox.h" />
+    <ClInclude Include="io\csv.h" />
+    <ClInclude Include="io\io.h" />
+    <ClInclude Include="io\json.h" />
+    <ClInclude Include="io\mitsuba_vol.h" />
+    <ClInclude Include="libsg.h" />
+    <ClInclude Include="math\math.h" />
+    <ClInclude Include="math\OneEuroFilter.h" />
+    <ClInclude Include="mesh\ClusterMesh.h" />
+    <ClInclude Include="mesh\ContactDeterminator.h" />
+    <ClInclude Include="mesh\MeshSamples.h" />
+    <ClInclude Include="mesh\mesh_nn.h" />
+    <ClInclude Include="mesh\PointSampledMesh.h" />
+    <ClInclude Include="mesh\projection.h" />
+    <ClInclude Include="mesh\sampling.h" />
+    <ClInclude Include="mesh\TriMesh.h" />
+    <ClInclude Include="net\net.h" />
+    <ClInclude Include="segmentation\MeshSegment.h" />
+    <ClInclude Include="segmentation\Part.h" />
+    <ClInclude Include="segmentation\segmentation.h" />
+    <ClInclude Include="segmentation\SegmentGroup.h" />
+    <ClInclude Include="segmentation\Segmentator.h" />
+    <ClInclude Include="segmentation\SegmentatorClusterMesh.h" />
+    <ClInclude Include="segmentation\SurfacePredictor.h" />
+    <ClInclude Include="stats\centroidset.h" />
+    <ClInclude Include="stats\CategoricalFeats.h" />
+    <ClInclude Include="stats\Counter.h" />
+    <ClInclude Include="stats\distributions.h" />
+    <ClInclude Include="stats\histogram.h" />
+    <ClInclude Include="stats\pdf.h" />
+    <ClInclude Include="stats\sampler.h" />
+    <ClInclude Include="stats\select.h" />
+    <ClInclude Include="stats\stats.h" />
+    <ClInclude Include="symmetry\SymmetryDetector.h" />
+    <ClInclude Include="ui\CommandConsole.h" />
+    <ClInclude Include="ui\ErrorCode.h" />
+    <ClInclude Include="ui\EventMap.h" />
+    <ClInclude Include="util\eigenutil.h" />
+    <ClInclude Include="util\eigen_boost_serialization.h" />
+    <ClInclude Include="util\FlagSet.h" />
+    <ClInclude Include="util\grid.h" />
+    <ClInclude Include="util\index.h" />
+    <ClInclude Include="util\log.h" />
+    <ClInclude Include="util\Params.h" />
+    <ClInclude Include="util\smartenum.h" />
+    <ClInclude Include="util\timer.h" />
+    <ClInclude Include="util\util.h" />
+    <ClInclude Include="vis\ColorIndex.h" />
+    <ClInclude Include="vis\Heatmap.h" />
+    <ClInclude Include="vis\vis.h" />
+    <ClInclude Include="vis\vislog.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">common.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">common.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="core\AMCRecording.cpp" />
+    <ClCompile Include="core\CentroidDatabase.cpp" />
+    <ClCompile Include="core\Classifier.cpp" />
+    <ClCompile Include="core\ClassifierDatabase.cpp" />
+    <ClCompile Include="core\Database.cpp" />
+    <ClCompile Include="core\features.cpp" />
+    <ClCompile Include="core\LabeledGrid.cpp" />
+    <ClCompile Include="core\Model.cpp" />
+    <ClCompile Include="core\ModelDatabase.cpp" />
+    <ClCompile Include="core\ModelInstance.cpp" />
+    <ClCompile Include="core\MotionDatabase.cpp" />
+    <ClCompile Include="core\OccupancyGrid.cpp" />
+    <ClCompile Include="core\PoseController.cpp" />
+    <ClCompile Include="core\SkeletonDatabase.cpp" />
+    <ClCompile Include="core\SkeletonDistribution.cpp" />
+    <ClCompile Include="core\SkelPoseSampler.cpp" />
+    <ClCompile Include="core\RecordingDatabase.cpp" />
+    <ClCompile Include="core\learningUtil.cpp" />
+    <ClCompile Include="core\Recording.cpp" />
+    <ClCompile Include="core\Scan.cpp" />
+    <ClCompile Include="core\ScanDatabase.cpp" />
+    <ClCompile Include="core\Scene.cpp" />
+    <ClCompile Include="core\SceneDatabase.cpp" />
+    <ClCompile Include="core\SceneGrokker.cpp" />
+    <ClCompile Include="core\ScenePriors.cpp" />
+    <ClCompile Include="core\SceneSerialized.cpp" />
+    <ClCompile Include="core\Skeleton.cpp" />
+    <ClCompile Include="core\SkelState.cpp" />
+    <ClCompile Include="core\synth\InteractionScorer.cpp" />
+    <ClCompile Include="core\synth\InteractionSynth.cpp" />
+    <ClCompile Include="core\synth\ModelAligner.cpp" />
+    <ClCompile Include="core\synth\ModelPlacer.cpp" />
+    <ClCompile Include="core\synth\ModelRetriever.cpp" />
+    <ClCompile Include="core\synth\ObjectLabeler.cpp" />
+    <ClCompile Include="core\synth\PoseScorer.cpp" />
+    <ClCompile Include="core\synth\SkeletonPoser.cpp" />
+    <ClCompile Include="core\synth\synth.cpp" />
+    <ClCompile Include="cv\cvutil.cpp" />
+    <ClCompile Include="cv\VideoPlayer.cpp" />
+    <ClCompile Include="eval\metrics.cpp" />
+    <ClCompile Include="geo\convexhull.cpp" />
+    <ClCompile Include="geo\geo.cpp" />
+    <ClCompile Include="geo\lineAABB.cpp" />
+    <ClCompile Include="geo\minRectangle.cpp" />
+    <ClCompile Include="geo\OBB.cpp" />
+    <ClCompile Include="graph\alignment.cpp" />
+    <ClCompile Include="hierarchy\Hierarchy.cpp" />
+    <ClCompile Include="hierarchy\HierarchyMatcher.cpp" />
+    <ClCompile Include="interaction\InteractFrameSurfSampled.cpp" />
+    <ClCompile Include="interaction\InteractionDatabase.cpp" />
+    <ClCompile Include="interaction\InteractionFactory.cpp" />
+    <ClCompile Include="interaction\InteractionFeatures.cpp" />
+    <ClCompile Include="interaction\InteractionFrameFactory.cpp" />
+    <ClCompile Include="interaction\InteractionFrames.cpp" />
+    <ClCompile Include="interaction\InteractionGraph.cpp" />
+    <ClCompile Include="interaction\InteractionSet.cpp" />
+    <ClCompile Include="interaction\ModelAnnotation.cpp" />
+    <ClCompile Include="interaction\ProtoInteractionGraph.cpp" />
+    <ClCompile Include="interaction\similarity.cpp" />
+    <ClCompile Include="interaction\SkeletonInteraction.cpp" />
+    <ClCompile Include="io\binvox.cpp" />
+    <ClCompile Include="io\io.cpp" />
+    <ClCompile Include="io\json.cpp" />
+    <ClCompile Include="io\mitsuba_vol.cpp" />
+    <ClCompile Include="math\math.cpp" />
+    <ClCompile Include="mesh\ClusterMesh.cpp" />
+    <ClCompile Include="mesh\MeshSamples.cpp" />
+    <ClCompile Include="mesh\mesh_nn.cpp" />
+    <ClCompile Include="mesh\projection.cpp" />
+    <ClCompile Include="net\net.cpp" />
+    <ClCompile Include="segmentation\MeshSegment.cpp" />
+    <ClCompile Include="segmentation\Part.cpp" />
+    <ClCompile Include="segmentation\segmentation.cpp" />
+    <ClCompile Include="segmentation\Segmentator.cpp" />
+    <ClCompile Include="segmentation\SegmentatorClusterMesh.cpp" />
+    <ClCompile Include="segmentation\SegmentGroup.cpp" />
+    <ClCompile Include="segmentation\SurfacePredictor.cpp" />
+    <ClCompile Include="stats\centroidset.cpp" />
+    <ClCompile Include="stats\distributions.cpp" />
+    <ClCompile Include="ui\CommandConsole.cpp" />
+    <ClCompile Include="util\log.cpp" />
+    <ClCompile Include="util\Params.cpp" />
+    <ClCompile Include="util\timer.cpp" />
+    <ClCompile Include="util\util.cpp" />
+    <ClCompile Include="vis\ColorIndex.cpp" />
+    <ClCompile Include="vis\Heatmap.cpp" />
+    <ClCompile Include="vis\vis.cpp" />
+    <ClCompile Include="vis\vislog.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\jace-proxy\proxy.vcxproj">
+      <Project>{ffcf37b3-5edc-43bc-a6e0-f1524dbfcefa}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8A6DF62C-D881-4FA3-B9AB-0FA4A600BB66}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libsg</RootNamespace>
+    <ProjectName>libsg</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\proj\props\mLib.props" />
+    <Import Project="..\proj\props\libsg.props" />
+    <Import Project="..\proj\props\JNI.props" />
+    <Import Project="..\proj\props\OpenCV3.props" />
+    <Import Project="..\proj\props\assimp.props" />
+    <Import Project="..\proj\props\cpp-netlib.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\proj\props\mLib.props" />
+    <Import Project="..\proj\props\libsg.props" />
+    <Import Project="..\proj\props\JNI.props" />
+    <Import Project="..\proj\props\OpenCV3.props" />
+    <Import Project="..\proj\props\assimp.props" />
+    <Import Project="..\proj\props\cpp-netlib.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>JACE_PROXY_EXPORTS;_USE_MATH_DEFINES;_CRT_SECURE_NO_DEPRECATE;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <AdditionalIncludeDirectories>..\libsg\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>common.h</PrecompiledHeaderFile>
+      <OpenMPSupport>true</OpenMPSupport>
+      <AdditionalOptions> /bigobj /Zm400 %(AdditionalOptions)</AdditionalOptions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PreprocessorDefinitions>JACE_PROXY_EXPORTS;_USE_MATH_DEFINES;_CRT_SECURE_NO_DEPRECATE;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WarningLevel>Level3</WarningLevel>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <PrecompiledHeaderFile>common.h</PrecompiledHeaderFile>
+      <AdditionalOptions>-Zm300 %(AdditionalOptions)</AdditionalOptions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib />
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

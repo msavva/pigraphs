@@ -1,0 +1,37 @@
+<project name="Jace.Java" default="release" basedir=".">
+    <target name="-jace.task">
+        <property name="JACE_HOME" value="../jace"/>
+        <taskdef resource="org/jace/ant/task.properties">
+            <classpath>
+                <fileset dir="${JACE_HOME}" includes="**/*.jar"/>
+            </classpath>
+        </taskdef>
+    </target>
+
+    <!--
+    - Runs AutoProxy on the source code to generate the required proxies.
+    -->
+    <target name="proxy_generate" depends="-jace.task">
+        <mkdir dir="source"/>
+        <mkdir dir="include"/>
+
+        <GenerateCppProxies outputHeaders="include"
+                            outputSources="source"
+                            exportSymbols="true">
+            <classpath>
+                <pathelement location="${java.home}/lib/rt.jar"/>
+                <pathelement location="../bin/weka.jar"/>
+                <pathelement location="../JavaApps/target/SceneGrok-0.0.1.jar"/>
+            </classpath>
+            <inputHeaders dir="."/>
+            <inputSources dir="."/>
+        </GenerateCppProxies>
+    </target>
+
+    <target name="release" depends="proxy_generate"/>
+
+    <target name="clean">
+        <delete dir="source"/>
+        <delete dir="include"/>
+    </target>
+</project>

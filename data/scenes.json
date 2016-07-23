@@ -1,0 +1,208 @@
+{
+"id": "scenegrok-scans",
+"scenes": [
+{
+"id": "3bcommons",
+"mesh": "3bcommons.ply",
+"mesh-debug": "3bcommonsd.ply",
+"annotations": "3bcommonsd.segs.json",
+"sceneType": "lounge",
+"hasGround": true
+},
+{
+"id": "3bHallway",
+"mesh": "3bHallway.ply",
+"mesh-debug": "3bHallwayd.ply",
+"annotations": "3bHallwayd.segs.json",
+"sceneType": "hallway",
+"hasGround": true
+},
+{
+"id": "ahouse",
+"mesh": "ahouse.ply",
+"mesh-debug": "ahoused.ply",
+"annotations": "ahoused.segs.json",
+"sceneType": "living room",
+"hasGround": true
+},
+{
+"id": "gates250",
+"mesh": "gates250.ply",
+"mesh-debug": "gates250d.ply",
+"annotations": "gates250d.segs.json",
+"sceneType": "lounge",
+"hasGround": true
+},
+{
+"id": "gates360",
+"mesh": "gates360.ply",
+"mesh-debug": "gates360d.ply",
+"annotations": "gates360d.segs.json",
+"sceneType": "office",
+"hasGround": true
+},
+{
+"id": "gates381",
+"mesh": "gates381.ply",
+"mesh-debug": "gates381d.ply",
+"annotations": "gates381d.segs.json",
+"sceneType": "office",
+"hasGround": true
+},
+{
+"id": "gates381a",
+"mesh": "gates381a.ply",
+"mesh-debug": "gates381ad.ply",
+"annotations": "gates381ad.segs.json",
+"sceneType": "office",
+"hasGround": true
+},
+{
+"id": "gates386",
+"mesh": "gates386.ply",
+"mesh-debug": "gates386d.ply",
+"annotations": "gates386d.segs.json",
+"sceneType": "office",
+"hasGround": true
+},
+{
+"id": "gates392",
+"mesh": "gates392.ply",
+"mesh-debug": "gates392d.ply",
+"annotations": "gates392d.segs.json",
+"sceneType": "conference room",
+"hasGround": true
+},
+{
+"id": "gates400",
+"mesh": "gates400.ply",
+"mesh-debug": "gates400d.ply",
+"annotations": "gates400d.segs.json",
+"sceneType": "conference room",
+"hasGround": true
+},
+{
+"id": "gates500",
+"mesh": "gates500.ply",
+"mesh-debug": "gates500d.ply",
+"annotations": "gates500d.segs.json",
+"sceneType": "lounge",
+"hasGround": true
+},
+{
+"id": "gates503",
+"mesh": "gates503.ply",
+"mesh-debug": "gates503d.ply",
+"annotations": "gates503d.segs.json",
+"sceneType": "lounge",
+"hasGround": true
+},
+{
+"id": "living",
+"mesh": "living.ply",
+"mesh-debug": "livingd.ply",
+"annotations": "livingd.segs.json",
+"sceneType": "living room",
+"hasGround": true
+},
+{
+"id": "living3",
+"mesh": "living3.ply",
+"mesh-debug": "living3d.ply",
+"annotations": "living3d.segs.json",
+"sceneType": "living room",
+"hasGround": true
+},
+{
+"id": "matt-bedroom",
+"mesh": "matt-bedroom.ply",
+"mesh-debug": "matt-bedroomd.ply",
+"sceneType": "bedroom",
+"hasGround": false
+},
+{
+"id": "ford0",
+"mesh": "ford0.ply",
+"mesh-debug": "ford0d.ply",
+"sceneType": "desk",
+"hasGround": false
+},
+{
+"id": "dining1",
+"mesh": "dining1.ply",
+"mesh-debug": "dining1d.ply",
+"sceneType": "dining table",
+"hasGround": true
+},
+{
+"id": "dining2",
+"mesh": "dining2.ply",
+"mesh-debug": "dining2d.ply",
+"sceneType": "dining table",
+"hasGround": false
+},
+{
+"id": "sga15-apt500",
+"mesh": "sga15-apt500.ply",
+"mesh-debug": "sga15-apt500d.ply",
+"annotations": "sga15-apt500d.segs.json",
+"sceneType": "living room",
+"hasGround": true
+},
+{
+"id": "sga15-apt500bedroom",
+"mesh": "sga15-apt500bedroom.ply",
+"mesh-debug": "sga15-apt500bedroomd.ply",
+"annotations": "sga15-apt500bedroomd.segs.json",
+"sceneType": "bedroom",
+"hasGround": true
+},
+{
+"id": "sga15-gates200Hallway",
+"mesh": "sga15-gates200Hallway.ply",
+"mesh-debug": "sga15-gates200Hallwayd.ply",
+"annotations": "sga15-gates200Hallwayd.segs.json",
+"sceneType": "hallway",
+"hasGround": true
+},
+{
+"id": "sga15-gates372",
+"mesh": "sga15-gates372.ply",
+"mesh-debug": "sga15-gates372d.ply",
+"annotations": "sga15-gates372d.segs.json",
+"sceneType": "office",
+"hasGround": true
+},
+{
+"id": "sga15-gates381",
+"mesh": "sga15-gates381.ply",
+"mesh-debug": "sga15-gates381d.ply",
+"annotations": "sga15-gates381d.segs.json",
+"sceneType": "office",
+"hasGround": true
+},
+{
+"id": "sga15-michael",
+"mesh": "sga15-michael.ply",
+"mesh-debug": "sga15-michaeld.ply",
+"annotations": "sga15-michaeld.segs.json",
+"sceneType": "living room",
+"hasGround": true
+},
+{
+"id": "sga15-phone",
+"mesh": "sga15-phone.ply",
+"mesh-debug": "sga15-phoned.ply",
+"annotations": "sga15-phoned.segs.json",
+"sceneType": "office",
+"hasGround": true
+},
+{
+"id": "eg-office",
+"mesh": "eg-office.ply",
+"mesh-debug": "eg-officed.ply",
+"sceneType": "desk",
+"hasGround": true
+}
+]
+}

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{ec5c4df6-a1f8-43a3-b163-a32f7f28c6f9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="wekautil.cpp" />
+    <ClCompile Include="source\jace\proxy\edu\stanford\graphics\wekautils\Classer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\edu\stanford\graphics\wekautils\Clustering.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\edu\stanford\graphics\wekautils\Common.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\java\io\IOException.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\java\io\Serializable.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\java\lang\CharSequence.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\java\lang\Comparable.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\java\lang\Exception.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\java\lang\Integer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\java\lang\Number.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\java\lang\Object.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\java\lang\String.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\java\lang\Throwable.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="nlputil.cpp" />
+    <ClCompile Include="source\jace\proxy\edu\stanford\graphics\parser\ActionParser.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\edu\stanford\graphics\parser\Action.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\edu\stanford\graphics\parser\Mention.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\java\util\AbstractCollection.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\java\util\AbstractList.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\java\util\ArrayList.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\java\util\Collection.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\java\util\List.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\java\util\RandomAccess.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\jace\proxy\java\lang\Iterable.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="wekautil.h" />
+    <ClInclude Include="nlputil.h" />
+  </ItemGroup>
+</Project>

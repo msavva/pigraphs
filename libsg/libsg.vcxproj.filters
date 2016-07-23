@@ -1,0 +1,717 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="geo">
+      <UniqueIdentifier>{e2fa86cd-d2e3-4699-bcad-f41fbab6658a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ann">
+      <UniqueIdentifier>{ef707555-af30-47fe-bee5-c29922bcb950}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cv">
+      <UniqueIdentifier>{ac95c937-8ea1-4839-8a1e-c256715a913d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{9bdea5b1-dd4e-4ceb-8c8f-0d1a4e47a2fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{71ae51c0-3503-4a97-971a-a8d8926edcf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="symmetry">
+      <UniqueIdentifier>{8c802da1-b001-43be-b153-3f354c3b7b76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="segmentation">
+      <UniqueIdentifier>{1711db71-7663-4df9-9739-42c1a0423e2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mesh">
+      <UniqueIdentifier>{8741eff1-aa50-4d8b-9b7c-dd8fcd45e2d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hierarchy">
+      <UniqueIdentifier>{da89e7b7-fdf3-4e6e-ad83-bbd487e030ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vis">
+      <UniqueIdentifier>{86278568-0e08-45b7-a024-62f2818d9e44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{e8ad8fe1-8d57-4277-a5d8-de6d4390cc4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stats">
+      <UniqueIdentifier>{a8c95425-d675-4c99-b58d-6c6031688fb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io">
+      <UniqueIdentifier>{992c3cd3-378f-4f02-ad08-7bd257c9a47b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{4d8196af-d5db-4066-bb73-cd35099be042}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="graph">
+      <UniqueIdentifier>{cc0e5735-a77f-42ad-b958-7b5d4333383f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interaction">
+      <UniqueIdentifier>{0b46294d-1231-4849-8fcc-210f3c0da940}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="net">
+      <UniqueIdentifier>{637b47e0-ab6b-4c34-912f-ffca9925e55a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\synth">
+      <UniqueIdentifier>{5c5671a8-73ad-4637-a5b2-a2268455d776}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="eval">
+      <UniqueIdentifier>{c7ba887c-62ac-466f-9f94-80fba6d20d37}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="geo\convexhull.h">
+      <Filter>geo</Filter>
+    </ClInclude>
+    <ClInclude Include="util\util.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\EventMap.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="geo\geo.h">
+      <Filter>geo</Filter>
+    </ClInclude>
+    <ClInclude Include="geo\OBB.h">
+      <Filter>geo</Filter>
+    </ClInclude>
+    <ClInclude Include="cv\cvutil.h">
+      <Filter>cv</Filter>
+    </ClInclude>
+    <ClInclude Include="hierarchy\Hierarchy.h">
+      <Filter>hierarchy</Filter>
+    </ClInclude>
+    <ClInclude Include="hierarchy\HierarchyMatcher.h">
+      <Filter>hierarchy</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\ClusterMesh.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\ContactDeterminator.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshSamples.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\PointSampledMesh.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="segmentation\Segmentator.h">
+      <Filter>segmentation</Filter>
+    </ClInclude>
+    <ClInclude Include="symmetry\SymmetryDetector.h">
+      <Filter>symmetry</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\TriMesh.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="vis\vis.h">
+      <Filter>vis</Filter>
+    </ClInclude>
+    <ClInclude Include="segmentation\SegmentatorClusterMesh.h">
+      <Filter>segmentation</Filter>
+    </ClInclude>
+    <ClInclude Include="util\index.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="geo\minRectangle.h">
+      <Filter>geo</Filter>
+    </ClInclude>
+    <ClInclude Include="util\Params.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\FlagSet.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="ann\SimpleNN.h">
+      <Filter>ann</Filter>
+    </ClInclude>
+    <ClInclude Include="ann\distance.h">
+      <Filter>ann</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Classifier.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Database.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\features.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\learningUtil.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Recording.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\RecordingDatabase.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Skeleton.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\SceneGrokker.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="segmentation\MeshSegment.h">
+      <Filter>segmentation</Filter>
+    </ClInclude>
+    <ClInclude Include="core\CentroidDatabase.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Dataset.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h" />
+    <ClInclude Include="core\ClassifierDatabase.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="ann\KdTreeFlann.h">
+      <Filter>ann</Filter>
+    </ClInclude>
+    <ClInclude Include="ann\KdTreeNanoflann.h">
+      <Filter>ann</Filter>
+    </ClInclude>
+    <ClInclude Include="ann\KdTree.h">
+      <Filter>ann</Filter>
+    </ClInclude>
+    <ClInclude Include="vis\Heatmap.h">
+      <Filter>vis</Filter>
+    </ClInclude>
+    <ClInclude Include="io\json.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\io.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="libsg.h" />
+    <ClInclude Include="stats\histogram.h">
+      <Filter>stats</Filter>
+    </ClInclude>
+    <ClInclude Include="stats\centroidset.h">
+      <Filter>stats</Filter>
+    </ClInclude>
+    <ClInclude Include="stats\pdf.h">
+      <Filter>stats</Filter>
+    </ClInclude>
+    <ClInclude Include="stats\stats.h">
+      <Filter>stats</Filter>
+    </ClInclude>
+    <ClInclude Include="math\math.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="segmentation\SegmentGroup.h">
+      <Filter>segmentation</Filter>
+    </ClInclude>
+    <ClInclude Include="graph\Graph.h">
+      <Filter>graph</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ModelDatabase.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\SkeletonInteraction.h">
+      <Filter>interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="util\eigenutil.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\sampling.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\ModelAnnotation.h">
+      <Filter>interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\mesh_nn.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="segmentation\segmentation.h">
+      <Filter>segmentation</Filter>
+    </ClInclude>
+    <ClInclude Include="io\binvox.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\CommandConsole.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="core\SceneGrokMap.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="util\grid.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\projection.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="util\timer.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="stats\sampler.h">
+      <Filter>stats</Filter>
+    </ClInclude>
+    <ClInclude Include="core\OccupancyGrid.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Model.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="graph\alignment.h">
+      <Filter>graph</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\ErrorCode.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="util\log.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="core\LabeledGrid.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\SkeletonVolume.h">
+      <Filter>interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="vis\ColorIndex.h">
+      <Filter>vis</Filter>
+    </ClInclude>
+    <ClInclude Include="stats\Counter.h">
+      <Filter>stats</Filter>
+    </ClInclude>
+    <ClInclude Include="util\eigen_boost_serialization.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="geo\ScoredTransform.h">
+      <Filter>geo</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ScenePriors.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="cv\VideoPlayer.h">
+      <Filter>cv</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ScanDatabase.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Scan.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Scene.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\SceneSerialized.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="vis\vislog.h">
+      <Filter>vis</Filter>
+    </ClInclude>
+    <ClInclude Include="core\TreeNode.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\SceneNode.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="segmentation\Part.h">
+      <Filter>segmentation</Filter>
+    </ClInclude>
+    <ClInclude Include="math\OneEuroFilter.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\InteractFrameSurfSampled.h">
+      <Filter>interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\InteractionMap.h">
+      <Filter>interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="stats\CategoricalFeats.h">
+      <Filter>stats</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\InteractionGraph.h">
+      <Filter>interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\ProtoInteractionGraph.h">
+      <Filter>interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\similarity.h">
+      <Filter>interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\VerbNoun.h">
+      <Filter>interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\Interaction.h">
+      <Filter>interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\InteractionFactory.h">
+      <Filter>interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\InteractionDatabase.h">
+      <Filter>interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\InteractionSet.h">
+      <Filter>interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\InteractionFrameFactory.h">
+      <Filter>interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="io\csv.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="core\SceneDatabase.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="segmentation\SurfacePredictor.h">
+      <Filter>segmentation</Filter>
+    </ClInclude>
+    <ClInclude Include="net\net.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="core\SkelPoseSampler.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\synth\synth.h">
+      <Filter>core\synth</Filter>
+    </ClInclude>
+    <ClInclude Include="core\synth\InteractionSynth.h">
+      <Filter>core\synth</Filter>
+    </ClInclude>
+    <ClInclude Include="core\synth\SkeletonPoser.h">
+      <Filter>core\synth</Filter>
+    </ClInclude>
+    <ClInclude Include="core\synth\ModelPlacer.h">
+      <Filter>core\synth</Filter>
+    </ClInclude>
+    <ClInclude Include="core\synth\ObjectLabeler.h">
+      <Filter>core\synth</Filter>
+    </ClInclude>
+    <ClInclude Include="core\synth\ModelRetriever.h">
+      <Filter>core\synth</Filter>
+    </ClInclude>
+    <ClInclude Include="core\synth\ModelAligner.h">
+      <Filter>core\synth</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ModelInstance.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\SkelState.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\SkeletonDatabase.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="stats\distributions.h">
+      <Filter>stats</Filter>
+    </ClInclude>
+    <ClInclude Include="core\SkeletonDistribution.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\InteractionFrames.h">
+      <Filter>interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="util\smartenum.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="stats\select.h">
+      <Filter>stats</Filter>
+    </ClInclude>
+    <ClInclude Include="core\AMCRecording.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\synth\InteractionScorer.h">
+      <Filter>core\synth</Filter>
+    </ClInclude>
+    <ClInclude Include="geo\voxels.h">
+      <Filter>geo</Filter>
+    </ClInclude>
+    <ClInclude Include="core\MotionDatabase.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\synth\PoseScorer.h">
+      <Filter>core\synth</Filter>
+    </ClInclude>
+    <ClInclude Include="core\PoseController.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="geo\lineAABB.h">
+      <Filter>geo</Filter>
+    </ClInclude>
+    <ClInclude Include="io\mitsuba_vol.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="geo\gridutils.h">
+      <Filter>geo</Filter>
+    </ClInclude>
+    <ClInclude Include="eval\ConfusionMatrix.h">
+      <Filter>eval</Filter>
+    </ClInclude>
+    <ClInclude Include="eval\metrics.h">
+      <Filter>eval</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction\InteractionFeatures.h">
+      <Filter>interaction</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="util\util.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="geo\OBB.cpp">
+      <Filter>geo</Filter>
+    </ClCompile>
+    <ClCompile Include="geo\geo.cpp">
+      <Filter>geo</Filter>
+    </ClCompile>
+    <ClCompile Include="cv\cvutil.cpp">
+      <Filter>cv</Filter>
+    </ClCompile>
+    <ClCompile Include="hierarchy\Hierarchy.cpp">
+      <Filter>hierarchy</Filter>
+    </ClCompile>
+    <ClCompile Include="hierarchy\HierarchyMatcher.cpp">
+      <Filter>hierarchy</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\ClusterMesh.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshSamples.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation\Segmentator.cpp">
+      <Filter>segmentation</Filter>
+    </ClCompile>
+    <ClCompile Include="vis\vis.cpp">
+      <Filter>vis</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation\SegmentatorClusterMesh.cpp">
+      <Filter>segmentation</Filter>
+    </ClCompile>
+    <ClCompile Include="geo\minRectangle.cpp">
+      <Filter>geo</Filter>
+    </ClCompile>
+    <ClCompile Include="geo\convexhull.cpp">
+      <Filter>geo</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Recording.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Skeleton.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\SceneGrokker.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Database.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation\MeshSegment.cpp">
+      <Filter>segmentation</Filter>
+    </ClCompile>
+    <ClCompile Include="core\features.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\learningUtil.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Classifier.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\RecordingDatabase.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\CentroidDatabase.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="common.cpp" />
+    <ClCompile Include="core\ClassifierDatabase.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="vis\Heatmap.cpp">
+      <Filter>vis</Filter>
+    </ClCompile>
+    <ClCompile Include="io\io.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\json.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="stats\centroidset.cpp">
+      <Filter>stats</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation\SegmentGroup.cpp">
+      <Filter>segmentation</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\SkeletonInteraction.cpp">
+      <Filter>interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="util\Params.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ModelDatabase.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\ModelAnnotation.cpp">
+      <Filter>interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\mesh_nn.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation\segmentation.cpp">
+      <Filter>segmentation</Filter>
+    </ClCompile>
+    <ClCompile Include="io\binvox.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\CommandConsole.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\projection.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="util\timer.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="core\OccupancyGrid.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Model.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="graph\alignment.cpp">
+      <Filter>graph</Filter>
+    </ClCompile>
+    <ClCompile Include="util\log.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ScenePriors.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="cv\VideoPlayer.cpp">
+      <Filter>cv</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ScanDatabase.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Scan.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Scene.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\SceneSerialized.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="vis\vislog.cpp">
+      <Filter>vis</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation\Part.cpp">
+      <Filter>segmentation</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\InteractFrameSurfSampled.cpp">
+      <Filter>interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\InteractionGraph.cpp">
+      <Filter>interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\ProtoInteractionGraph.cpp">
+      <Filter>interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\similarity.cpp">
+      <Filter>interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\InteractionFactory.cpp">
+      <Filter>interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\InteractionDatabase.cpp">
+      <Filter>interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\InteractionSet.cpp">
+      <Filter>interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\InteractionFrameFactory.cpp">
+      <Filter>interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="vis\ColorIndex.cpp">
+      <Filter>vis</Filter>
+    </ClCompile>
+    <ClCompile Include="core\SceneDatabase.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation\SurfacePredictor.cpp">
+      <Filter>segmentation</Filter>
+    </ClCompile>
+    <ClCompile Include="net\net.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="core\SkelPoseSampler.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\synth\synth.cpp">
+      <Filter>core\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="core\synth\InteractionSynth.cpp">
+      <Filter>core\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="core\synth\SkeletonPoser.cpp">
+      <Filter>core\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="core\synth\ModelPlacer.cpp">
+      <Filter>core\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="core\synth\ObjectLabeler.cpp">
+      <Filter>core\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ModelInstance.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\synth\ModelAligner.cpp">
+      <Filter>core\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="core\synth\ModelRetriever.cpp">
+      <Filter>core\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="core\SkelState.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\SkeletonDatabase.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="math\math.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="stats\distributions.cpp">
+      <Filter>stats</Filter>
+    </ClCompile>
+    <ClCompile Include="core\SkeletonDistribution.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\InteractionFrames.cpp">
+      <Filter>interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="core\AMCRecording.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\synth\InteractionScorer.cpp">
+      <Filter>core\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="core\MotionDatabase.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\synth\PoseScorer.cpp">
+      <Filter>core\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="core\PoseController.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="geo\lineAABB.cpp">
+      <Filter>geo</Filter>
+    </ClCompile>
+    <ClCompile Include="io\mitsuba_vol.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="core\LabeledGrid.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="eval\metrics.cpp">
+      <Filter>eval</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction\InteractionFeatures.cpp">
+      <Filter>interaction</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
