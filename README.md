@@ -1,17 +1,14 @@
-PiGraphs
-===========
+# Compiling
 
 Compiles with Visual Studio 2013.  Main solution file is `pigraphs.sln`.  Make sure working directory of project configurations is set to `$(SolutionDir)bin\$(Configuration)`.  You may need to copy missing dlls to the working directory path.
 
 Default parameters are in `$(SolutionDir)bin\parameters_default.txt`.  If `$(SolutionDir)bin\parameters.txt` exists, it acts as an override for any parameter settings contained in `parameters_default.txt`.
 
-# Prerequisites for compiling
+### Prerequisites for compiling
  - DirectX11 SDK : http://www.microsoft.com/en-us/download/details.aspx?id=6812
- - mLib : https://scm9.informatik.uni-erlangen.de/simanies/svn/mLib/
- - mLibExternal (includes boost, openmesh, etc) : https://scm9.informatik.uni-erlangen.de/simanies/svn/mLibExternal/
-   - Create environment variable `MLIB_EXTERNAL_DIR` pointing to checked out repository
-   - Add `%MLIB_EXTERNAL_DIR%\libsWindows\dll64` to PATH
+ - mLib and mLibExternal dependencies : download mLib.zip file and extract to repository root.  Then add `C:\pigraphsRepoRoot\mLibExternal\libsWindows\dll64` to PATH.
  - Java JNI
+   - Install Java 8 JDK
    - Set `JAVA_HOME` to Java 8 JDK
    - Add `%JAVA_HOME%\bin` and `%JAVA_HOME%\jre\bin\server` to path
 
