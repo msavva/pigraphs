@@ -53,5 +53,7 @@ CompiledShaders/
 # External mLib dependencies
 mLib/
 mLibExternal/
-mLib.zip
+mLibExternal.zip
+learned-models.cached.zip
+
 
