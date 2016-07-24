@@ -1,3 +1,7 @@
+This is the code and data repository for the SIGGRAPH 2016 technical paper [PiGraphs: Learning Interaction Snapshots from Observations](http://graphics.stanford.edu/projects/pigraphs/).  If you use this code or data in your research please cite the paper as described in the [project website](http://graphics.stanford.edu/projects/pigraphs/).
+
+See the [Command Overview wiki](../../wiki/Command-Overview) for an overview of the UI and a description of the available commands for synthesizing interaction snapshots.
+
 # Compiling
 
 Compiles with Visual Studio 2013.  Main solution file is `pigraphs.sln`.  Make sure working directory of project configurations is set to `$(SolutionDir)bin\$(Configuration)`.  You may need to copy missing dlls to the working directory path.
