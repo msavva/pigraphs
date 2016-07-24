@@ -2,6 +2,8 @@ This is the code and data repository for the SIGGRAPH 2016 technical paper [PiGr
 
 See the [Command Overview wiki](../../wiki/Command-Overview) for an overview of the UI and a description of the available commands for synthesizing interaction snapshots.
 
+We provide a set of pre-trained models in the [learned-models.cached.zip](../../releases/download/v1.0/learned-models.cached.zip) archive.  After downloading, extract to the repository root.  To compile and run, you will need to download external dependencies package from [mLibExternal.zip](../../releases/download/v1.0/mLibExternal.zip) and also extract them to the repository root.
+
 # Compiling
 
 Compiles with Visual Studio 2013.  Main solution file is `pigraphs.sln`.  Make sure working directory of project configurations is set to `$(SolutionDir)bin\$(Configuration)`.  You may need to copy missing dlls to the working directory path.
@@ -10,7 +12,7 @@ Default parameters are in `$(SolutionDir)bin\parameters_default.txt`.  If `$(Sol
 
 ### Prerequisites for compiling
  - DirectX11 SDK : http://www.microsoft.com/en-us/download/details.aspx?id=6812
- - mLib and mLibExternal dependencies : download mLib.zip file and extract to repository root.  Then add `C:\pigraphsRepoRoot\mLibExternal\libsWindows\dll64` to PATH.
+ - mLib and mLibExternal dependencies provided by dependencies archive as described above. After extracting to repository root, add the `<repoRoot>\mLibExternal\libsWindows\dll64` directory to your PATH.
  - Java JNI
    - Install Java 8 JDK
    - Set `JAVA_HOME` to Java 8 JDK
