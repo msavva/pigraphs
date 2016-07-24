@@ -46,7 +46,7 @@ Binary section
 ```
 
 Remaining binary section is sequence pairs of uint32 (freeCtr,occCtr) in iteration order x, y, z (outermost to innermost).
-The worldToGrid 4x4 matrix transforms from the corresponding .ply file coordinate frame to the voxel grid coordinate frame.  Refer to [`libsg/core/OccupancyGrid.h`](libsg/core/OccupancyGrid.h) and `libsg/core/OccupancyGrid.cpp` for example reader and writer functions.
+The worldToGrid 4x4 matrix transforms from the corresponding .ply file coordinate frame to the voxel grid coordinate frame.  Refer to [`libsg/core/OccupancyGrid.h`](libsg/core/OccupancyGrid.h) and [`libsg/core/OccupancyGrid.cpp`](libsg/core/OccupancyGrid.cpp) for example reader and writer functions.
 
 ## .vox
 Labeled sparse voxel grid for reconstructed environments where labels are object and object part categories.  Format is very similar to occupancy grid, with following ASCII header:
@@ -72,14 +72,14 @@ segGroups[{},...,{}] : array of segmentation group records with fields `id`, `la
 segIndices : array of integer segment ids for each vertex in the corresponding .ply mesh file.  Vertices are numbered in the order they are specified in the .ply file, and all vertices with the same segment id belong to one segment.  The ids are not neccessarily consecutive numbers.
 ```
 
-Refer to the code in `libsg/segmentation/SegmentGroup.cpp` (particularly `SegmentGroupRecord::load`) for an implementation of a reading function.
+Refer to the code in [`libsg/segmentation/SegmentGroup.cpp`](libsg/segmentation/SegmentGroup.cpp) (particularly `SegmentGroupRecord::load`) for an implementation of a reading function.
 
 
 # Recording data documentation
 The file basename has the format `sceneId_cameraId_timestamp.<ext>` where `<ext>` is one of file types below.  The `sceneId` part corresponds to the reconstructed scene in which the recording was taken.
 
 A recording consists of the set of files with the same basename and each following extension:
-- `.json` : Recording header in JSON format, containing tracked skeleton data.  See `libsg/core/Recording.h` and `libsg/core/Recording.cpp` for example loading code and documentation.
+- `.json` : Recording header in JSON format, containing tracked skeleton data.  See [`libsg/core/Recording.h`](libsg/core/Recording.h) and [`libsg/core/Recording.cpp`](libsg/core/Recording.cpp) for example loading code and documentation.
 - `.color.avi` : RGB frame video for recording. Frames in the video file correspond to the timestamps stored in the `.json` header.
 - `.depth.avi` : Depth and body segmentation mask video (see details below). Again, frames correspond to the timestamps in the `.json` header.
 - `.interactions.txt` : Interaction annotations for recording. Each line specifies a time range in the video and a set of verb:noun pairs that apply for that time range.  The format of each line is `startTimeInSec-endTimeInSec,verb1:noun1|verb2:noun2|...|verbN:nounN`.  In other words, the file is comma-separated with the first column giving a time range in `start-end` format, and the second column giving a string encoding of the verb:noun pairs.  The string encoding uses `|` as a separator between pairs, and `:` as a separator between verb and noun.
