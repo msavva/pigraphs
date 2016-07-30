@@ -1,4 +1,16 @@
-This is the code and data repository for the SIGGRAPH 2016 technical paper [PiGraphs: Learning Interaction Snapshots from Observations](http://graphics.stanford.edu/projects/pigraphs/).  If you use this code or data in your research please cite the paper as described in the [project website](http://graphics.stanford.edu/projects/pigraphs/).
+This is the code and data repository for the SIGGRAPH 2016 technical paper [PiGraphs: Learning Interaction Snapshots from Observations](http://graphics.stanford.edu/projects/pigraphs/).  If you use this code or data in your research please cite the paper:
+```
+@article{savva2016pigraphs,
+	title={{PiGraphs: Learning Interaction Snapshots from Observations}},
+	author={Manolis Savva and Angel X. Chang and Pat Hanrahan and Matthew Fisher and Matthias Nie{\ss}ner},
+	journal = {ACM Transactions on Graphics (TOG)},
+	publisher = {ACM},
+	volume = {35},
+	number = {4},
+	year = {2016}
+}
+```
+For more details about the project see the [project website](http://graphics.stanford.edu/projects/pigraphs/).
 
 See the [Command Overview wiki](../../wiki/Command-Overview) for an overview of the UI and a description of the available commands for synthesizing interaction snapshots.
 
