@@ -10,7 +10,7 @@ This is the code and data repository for the SIGGRAPH 2016 technical paper [PiGr
 	year = {2016}
 }
 ```
-For more details about the project see the [project website](http://graphics.stanford.edu/projects/pigraphs/).
+For more details about the project go to [http://graphics.stanford.edu/projects/pigraphs/](http://graphics.stanford.edu/projects/pigraphs/).
 
 See the [Command Overview wiki](../../wiki/Command-Overview) for an overview of the UI and a description of the available commands for synthesizing interaction snapshots.
 
