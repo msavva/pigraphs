@@ -37,6 +37,10 @@ If you have trouble running on Windows 8.1 and you get a `D3D11_CREATE_DEVICE_DE
 - Compile and package JavaApps as a jar file (`JavaApps/target/SceneGrok-0.0.1.jar`). IntelliJ IDEA with Maven installed is probably the easiest method.
 - Run `ant` in the `jace-proxy` subdirectory (requires [ant](http://ant.apache.org/) ) to create the `.cpp` and `.h`  files.  Note: You will need manually add newly generated files to the `jace-proxy` Visual Studio project manually.  Also, you will need to create some code in the `jace-proxy` (see `wekautil` as an example) to indicate what classes/methods you want Jace to autogenerate.  Make sure to include the proper class headers so Jace can properly detect the method signature and autogenerate your code (for instance, if your method uses a java List in the signature, include the hpp for List, just pretend it's already there).
 
+# Prepackaged VM image
+
+A Windows VM with VS2013, a copy of the PiGraphs codebase and all dependencies installed is available [here](http://dovahkiin.stanford.edu/etherion/data/pigraphs/pigraphs.vhd.bz2) (67GB, expands to 128GB VHD format image).  You can use this image to create a [Microsoft Azure Container](https://portal.azure.com), or run it locally with [VirtualBox](https://www.virtualbox.org/wiki/VirtualBox) using the vbox configuration file [here](http://dovahkiin.stanford.edu/etherion/data/pigraphs/pigraphs.vbox)
+
 # Scan data documentation
 Each scan has a filename with format `sceneId.<ext>` where `<ext>` is one of the extensions below.
 
