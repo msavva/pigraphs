@@ -124,3 +124,4 @@ void parseDepthFrame(const cv::Mat& depthAndBodyFrame) {
 }
 ```
 
+For convenience, we also provide example C++ code for loading the recording `.json` format with no external dependencies: [loadrec](http://graphics.stanford.edu/projects/scenegrok/loadrec.zip).
