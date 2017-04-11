@@ -39,7 +39,7 @@ If you have trouble running on Windows 8.1 and you get a `D3D11_CREATE_DEVICE_DE
 
 # Prepackaged VM image
 
-A Windows VM with VS2013, a copy of the PiGraphs codebase and all dependencies installed is available [here](http://dovahkiin.stanford.edu/etherion/data/pigraphs/pigraphs.vhd.bz2) (67GB, expands to 128GB VHD format image).  You can use this image to create a [Microsoft Azure Container](https://portal.azure.com), or run it locally with [VirtualBox](https://www.virtualbox.org/wiki/VirtualBox) using the vbox configuration file [here](http://dovahkiin.stanford.edu/etherion/data/pigraphs/pigraphs.vbox)
+A Windows VM with VS2013, a copy of the PiGraphs codebase and all dependencies installed is available [here](http://dovahkiin.stanford.edu/etherion/data/pigraphs/pigraphs.vhd.bz2) (67GB, expands to 128GB VHD format image).  You can use this image to create a [Microsoft Azure Container](https://portal.azure.com), or run it locally with [VirtualBox](https://www.virtualbox.org/wiki/VirtualBox) using the vbox configuration file [here](http://dovahkiin.stanford.edu/etherion/data/pigraphs/pigraphs.vbox).  The user account password is `PiGraphs2016`.
 
 # Scan data documentation
 Each scan has a filename with format `sceneId.<ext>` where `<ext>` is one of the extensions below.
